@@ -6,3 +6,4 @@ services:
       - ./config.yml:/home/nonroot/.cloudflared/config.yml:ro
       - ./tunnel.json:/home/nonroot/.cloudflared/tunnel.json:ro
     restart: unless-stopped
+    network_mode: host
