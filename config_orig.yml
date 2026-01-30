@@ -1,0 +1,7 @@
+tunnel: ssh-edge
+credentials-file: /home/nonroot/.cloudflared/tunnel.json
+
+ingress:
+        - hostname: ssh.example.com
+          service: ssh://host.docker.internal:22
+        - service: http_status:404

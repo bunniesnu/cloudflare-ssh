@@ -1,0 +1,8 @@
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --config /home/nonroot/.cloudflared/config.yml run
+    volumes:
+      - ./config.yml:/home/nonroot/.cloudflared/config.yml:ro
+      - ./tunnel.json:/home/nonroot/.cloudflared/tunnel.json:ro
+    restart: unless-stopped
