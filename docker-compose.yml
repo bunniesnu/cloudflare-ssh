@@ -7,3 +7,4 @@ services:
       - ./tunnel.json:/home/nonroot/.cloudflared/tunnel.json:ro
     restart: unless-stopped
     network_mode: host
+    container_name: cloudflare-ssh
